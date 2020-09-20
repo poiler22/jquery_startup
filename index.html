@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>Kittidech Ditsuwan 61011441</title>
+        <script  src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous">
+ </script>
+
+ <script>
+
+
+
+
+       
+
+
+$(document).ready(function(){
+
+    //var random1 = $('#random1').text((Math.round(Math.random() * 100)) );
+    //var random2 = $('#random2').text((Math.round(Math.random() * 100)) );
+
+    var random1 = Math.round(Math.random() * 100);
+    var random2 = Math.round(Math.random() * 100);
+    $('#random1').text(random1);
+    $('#random2').text(random2);
+    answer = random1 + random2;
+  $("#check").click(function(){
+
+    
+      if ( $("#answer").val() == answer ){
+    $("#response").html("<h2 style='color:green;' > Good Job!</h2>");
+      }
+      else{
+        $("#response").html("<h2 style='color:red;' > Try Again!</h2>")
+      }
+  });
+
+
+  $("#random").click(function(){
+
+    var random1 = Math.round(Math.random() * 100);
+    var random2 = Math.round(Math.random() * 100);
+    $('#random1').text(random1);
+    $('#random2').text(random2);
+    $('#response').text("");
+    $('#answer').val("");
+    answer = random1 + random2;
+});
+
+
+
+
+
+});
+ 
+//         var random1 = 0;
+//         var random2 = 0;
+
+//         var answer = 0;
+//         var correctAnswer = 0;
+
+//         function reload(){
+//             random1 = Math.round(Math.random() * 100);
+//             random2 = Math.round(Math.random() * 100);
+//             document.getElementById("random1").innerText = random1;
+//             document.getElementById("random2").innerText = random2;
+//             document.getElementById("answer").value = "";
+//             document.getElementById("response").innerText = "";
+
+//         }
+//         function checkAnswer(){
+//             answer = document.getElementById("answer").value;
+//             correctAnswer = random1 + random2;
+//             if(answer == correctAnswer){
+//                 document.getElementById("response").innerText = "Good Job!";
+//                 document.getElementById("response").className = "correct";
+//             } else {
+//                 document.getElementById("response").innerText = "Try Again!";
+//                 document.getElementById("response").className = "incorrect";
+//             }
+// }
+
+    
+
+
+        </script>
+
+
+        <style>
+            .correct{
+                color: green;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .incorrect{
+                color: red;
+                font-size: 30px;
+                font-weight: bold;
+            }
+        </style>    
+    </head>
+    <body>
+        <h1>Kittidech Ditsuwan 61011441</h1>
+        <div style="width: 400px; padding: 10px; border: 3px solid black; margin: 0; text-align: center;">
+            <div>
+                <h1 style="text-align:center;">QUIZ</h1>
+            </div>
+            <div style="font-size: 22px;">
+                What is the answer of <span id="random1">x</span> + <span id="random2"> y</span>?
+                <input id="answer" type="text" />
+            </div>
+            <div style="height: 10px;">
+
+            </div>
+            <button id="check" >Check</button>
+            <button id="random">Re-random</button>
+            <p id="response" ></p>
+        </div>
+        <script>
+   
+        </script>
+    </body>
+</html>
